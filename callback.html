@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Connexion réussie — ContentFlow</title>
+    <title>Connexion réussie — FlowPublish</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -27,12 +27,10 @@
         <h1>Connexion réussie</h1>
         <p id="status">Authentification TikTok en cours de traitement...</p>
     </div>
-
     <script>
         const params = new URLSearchParams(window.location.search);
         const code = params.get('code');
         const error = params.get('error');
-
         if (code) {
             document.getElementById('status').innerText = 
                 'Votre compte TikTok a été connecté avec succès. Vous pouvez fermer cette fenêtre.';
